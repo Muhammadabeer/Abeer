@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Apple</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/Apple-Logo-black.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  </style>
+</head>
+<body>
+
+    
+<nav class="navbar navbar-fixed-top navbar-inverse">
+
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar" id=""></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-apple"></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li class="active"><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+    					<li><a class="btn btn-social-icon btn-twitter" ><span class="fa fa-twitter"></span></a></li>
+        				<li><a class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a></li>
+                        <li><a class="btn btn-social-icon btn-pinterest"><span class="fa fa-pinterest-p"></span></a></li>
+                        <li><a class="btn btn-social-icon btn-yahoo"><span class="fa fa-yahoo"></span></a></li>
+                        <li><a class="btn btn-social-icon btn-google"><span class="fa fa-google"></span></a></li>
+                        <li><a class="btn btn-social-icon btn-dropbox"><span class="fa fa-dropbox"></span></a></li>
+                    </ul>
+    </div>
+  </div>
+</nav>
+<br>
+<br>
+<section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="list-group-item-heading">
+                <header>
+                    <h1 class="section-heading">Contact</h1>
+                    </header>
+                </div>
+                <div class="col-lg-7">
+                      <form class="form-horizontal">
+                          <div class="form-group">
+                          <label class="control-label" for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label" for="email">Email:</label>
+                           	<input type="email" class="form-control" id="email" placeholder="Enter Email">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label" for="phone">Phone:</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter Phone no."> 
+                          </div>
+                          <div class="form-group">
+                          	<label>Gender:</label><br>
+                          	<label class="radio-inline">
+                              <input class="active" type="radio" name="optradio">Male
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="optradio">Female
+                            </label>
+                          </div>
+                           <div class="form-group">
+                            <label for="Select" class=" control-label"></label>
+                              <select id="Select" class="form-control">
+                                <option>select Country</option>
+                                <option>Pakistan</option>
+                                <option>Canada</option>
+                                <option>Afghanistan</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="comment">Comment:</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                          </div>
+                          <div class="form-group">
+                              <button type="submit" class="btn btn-default">Submit</button>
+                          </div>
+                      </form>
+                 </div>
+                 <div class="col-lg-5">
+                     <div class="panel-primary">
+                     	<h1 class="panel-heading">Address:</h1>
+                        <p class="panel-body"> Cupertino, California, United States<br><br><br><br></p>
+                     </div>
+                     <div id="googleMap" style="height:400px;width:100%;"></div>
+						<script>
+                        function myMap() {
+                        var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+                        var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+                        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                        var marker = new google.maps.Marker({position:myCenter});
+                        marker.setMap(map);
+                        }
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWhYpoAmoSFY60OtNIQrxMtPJRacHXS4k&callback=myMap"></script>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+
+<footer class="container-fluid text-center">
+    <p class="pull-right"><a href="#">back on top</a> </p>
+    <p>&copy; 2017 <a href="index.html">Apple</a>, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+</footer>
+
+</body>
+</html>
